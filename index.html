@@ -1237,18 +1237,22 @@
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
           <div class="proj-card">
-            <h3>Project One</h3>
+            <h3>🍽 Vionara — Restoran İdarəetmə Sistemi</h3>
             <p class="proj-desc">
-              Add your first project here — describe what it does and the
-              problem it solves.
+              Full-Stack restoran idarəetmə platforması. Müştəri, kuryer, aşpaz, admin daxil olmaqla 6 fərqli rol paneli, real-time sifariş izləmə, onlayn ödəniş və xəritə inteqrasiyası ilə tam işlək sistem.
             </p>
             <ul class="proj-bullets">
-              <li>ASP.NET Core + EF Core + SQL Server backend</li>
-              <li>REST API with JWT authentication</li>
-              <li>Clean Architecture layering</li>
+              <li>Clean/Onion Architecture — 5 layer: API, Application, Persistence, Infrastructure, Domain</li>
+              <li>ASP.NET Core Web API (.NET 8) · EF Core Code First · SQL Server</li>
+              <li>ASP.NET Identity · JWT · 6 Rol (Admin, Müştəri, Kuryer, Aşpaz, Kassir, Menecer)</li>
+              <li>SignalR real-time: OrderStatusHub · CourierTrackingHub</li>
+              <li>AWS S3 (şəkil saxlama) · Stripe (onlayn ödəniş, AZN) · Gmail SMTP (email bildirişləri)</li>
+              <li>Nominatim API · Leaflet xəritəsi ilə kuryer izləmə</li>
+              <li>React 18 · TypeScript · Vite · TanStack Query v5 · shadcn/ui · Tailwind CSS</li>
+              <li>Repository + Service Pattern · Soft Delete · Audit Trail · AutoMapper · FluentValidation</li>
             </ul>
-            <p class="proj-skills">ASP.NET Core · EF Core · SQL Server · JWT</p>
-            <a href="#" class="btn btn-cyan">Live Site →</a>
+            <p class="proj-skills">.NET 8 · React 18 · SignalR · AWS S3 · Stripe · SQL Server · JWT · EF Core · TypeScript · Tailwind</p>
+            <a href="https://vionara.site/" target="_blank" class="btn btn-cyan">Live Site →</a>
           </div>
         </div>
       </div>
@@ -1328,14 +1332,11 @@
           Open to backend/full-stack roles, internships, and collaborations.
         </p>
         <div class="contact-cards">
-          <a
-            href="mailto:nasibshahverdiyev@gmail.com"
-            class="contact-card"
-          >
+          <a href="/cdn-cgi/l/email-protection#80eee1f3e9e2f3e8e1e8f6e5f2e4e9f9e5f6c0e7ede1e9ecaee3efed" class="contact-card">
             <span class="icon">✉</span>
             <div>
               <small>Email</small>
-              <strong>nasibshahverdiyev@gmail.com</strong>
+              <strong><span class="__cf_email__" data-cfemail="523c33213b30213a333a243720363b2b372412353f333b3e7c313d3f">[email&#160;protected]</span></strong>
             </div>
           </a>
           <a
@@ -1370,7 +1371,7 @@
     <footer>© 2026 Nasib Shahverdiyev. All rights reserved.</footer>
 
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
       // ── Mobile menu ──
       function toggleMobileMenu() {
         const menu = document.getElementById('mobileMenu');
@@ -1628,14 +1629,4 @@
           !langSelector.contains(event.target) &&
           dropdown.classList.contains("show")
         ) {
-          dropdown.classList.remove("show");
-        }
-      });
-
-      // Initialize language on page load
-      window.addEventListener("DOMContentLoaded", function () {
-        changeLang(currentLang);
-      });
-    </script>
-  </body>
-</html>
+          dropdown.classList.remove
