@@ -806,15 +806,24 @@
         border-radius: 2px;
         transition: all 0.3s;
       }
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
 
       /* Mobile menu overlay */
       .mobile-menu {
         display: none;
         position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background: rgba(10, 22, 40, 0.97);
         backdrop-filter: blur(20px);
         z-index: 99;
@@ -823,7 +832,9 @@
         justify-content: center;
         gap: 32px;
       }
-      .mobile-menu.open { display: flex; }
+      .mobile-menu.open {
+        display: flex;
+      }
       .mobile-menu a {
         color: var(--white);
         text-decoration: none;
@@ -832,7 +843,9 @@
         font-weight: 700;
         transition: color 0.2s;
       }
-      .mobile-menu a:hover { color: var(--cyan); }
+      .mobile-menu a:hover {
+        color: var(--cyan);
+      }
 
       /* ── Large screens / TV (1440px+) ── */
       @media (min-width: 1440px) {
@@ -995,7 +1008,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div style="display:flex;align-items:center;gap:12px;">
+      <div style="display: flex; align-items: center; gap: 12px">
         <div class="lang-selector">
           <div class="lang-btn" id="langBtn" onclick="toggleLangDropdown()">
             <span id="currentLang">AZ</span>
@@ -1015,7 +1028,12 @@
             </div>
           </div>
         </div>
-        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleMobileMenu()"
+          aria-label="Menu"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -1043,7 +1061,7 @@
           />
         </div>
       </div>
-      <h1 class="hero">Nasib Shahverdiyev</h1>
+      <h1>Nasib Shahverdiyev</h1>
       <p class="hero-subtitle">Full-Stack Backend Developer</p>
       <p class="hero-tagline">
         Clean Architecture • Real-world Systems • Production-ready Code
@@ -1056,7 +1074,7 @@
           >⚡ GitHub</a
         >
         <a
-          href="https://www.linkedin.com/in/nasib"
+          href="https://www.linkedin.com/in/nasib-shahverdiyev/"
           target="_blank"
           class="btn btn-cyan"
           >in LinkedIn</a
@@ -1239,20 +1257,44 @@
           <div class="proj-card">
             <h3>🍽 Vionara — Restoran İdarəetmə Sistemi</h3>
             <p class="proj-desc">
-              Full-Stack restoran idarəetmə platforması. Müştəri, kuryer, aşpaz, admin daxil olmaqla 6 fərqli rol paneli, real-time sifariş izləmə, onlayn ödəniş və xəritə inteqrasiyası ilə tam işlək sistem.
+              Full-Stack restoran idarəetmə platforması. Müştəri, kuryer, aşpaz,
+              admin daxil olmaqla 6 fərqli rol paneli, real-time sifariş izləmə,
+              onlayn ödəniş və xəritə inteqrasiyası ilə tam işlək sistem.
             </p>
             <ul class="proj-bullets">
-              <li>Clean/Onion Architecture — 5 layer: API, Application, Persistence, Infrastructure, Domain</li>
-              <li>ASP.NET Core Web API (.NET 8) · EF Core Code First · SQL Server</li>
-              <li>ASP.NET Identity · JWT · 6 Rol (Admin, Müştəri, Kuryer, Aşpaz, Kassir, Menecer)</li>
+              <li>
+                Clean/Onion Architecture — 5 layer: API, Application,
+                Persistence, Infrastructure, Domain
+              </li>
+              <li>
+                ASP.NET Core Web API (.NET 8) · EF Core Code First · SQL Server
+              </li>
+              <li>
+                ASP.NET Identity · JWT · 6 Rol (Admin, Müştəri, Kuryer, Aşpaz,
+                Kassir, Menecer)
+              </li>
               <li>SignalR real-time: OrderStatusHub · CourierTrackingHub</li>
-              <li>AWS S3 (şəkil saxlama) · Stripe (onlayn ödəniş, AZN) · Gmail SMTP (email bildirişləri)</li>
+              <li>
+                AWS S3 (şəkil saxlama) · Stripe (onlayn ödəniş, AZN) · Gmail
+                SMTP (email bildirişləri)
+              </li>
               <li>Nominatim API · Leaflet xəritəsi ilə kuryer izləmə</li>
-              <li>React 18 · TypeScript · Vite · TanStack Query v5 · shadcn/ui · Tailwind CSS</li>
-              <li>Repository + Service Pattern · Soft Delete · Audit Trail · AutoMapper · FluentValidation</li>
+              <li>
+                React 18 · TypeScript · Vite · TanStack Query v5 · shadcn/ui ·
+                Tailwind CSS
+              </li>
+              <li>
+                Repository + Service Pattern · Soft Delete · Audit Trail ·
+                AutoMapper · FluentValidation
+              </li>
             </ul>
-            <p class="proj-skills">.NET 8 · React 18 · SignalR · AWS S3 · Stripe · SQL Server · JWT · EF Core · TypeScript · Tailwind</p>
-            <a href="https://vionara.site/" target="_blank" class="btn btn-cyan">Live Site →</a>
+            <p class="proj-skills">
+              .NET 8 · React 18 · SignalR · AWS S3 · Stripe · SQL Server · JWT ·
+              EF Core · TypeScript · Tailwind
+            </p>
+            <a href="https://vionara.site/" target="_blank" class="btn btn-cyan"
+              >Live Site →</a
+            >
           </div>
         </div>
       </div>
@@ -1332,11 +1374,11 @@
           Open to backend/full-stack roles, internships, and collaborations.
         </p>
         <div class="contact-cards">
-          <a href="/cdn-cgi/l/email-protection#80eee1f3e9e2f3e8e1e8f6e5f2e4e9f9e5f6c0e7ede1e9ecaee3efed" class="contact-card">
+          <a href="mailto:nasibshahverdiyev@gmail.com" class="contact-card">
             <span class="icon">✉</span>
             <div>
               <small>Email</small>
-              <strong><span class="__cf_email__" data-cfemail="523c33213b30213a333a243720363b2b372412353f333b3e7c313d3f">[email&#160;protected]</span></strong>
+              <strong>nasibshahverdiyev@gmail.com</strong>
             </div>
           </a>
           <a
@@ -1348,13 +1390,14 @@
             <div><small>GitHub</small><strong>github.com/Tagforaz</strong></div>
           </a>
           <a
-            href="https://www.linkedin.com/in/nasib"
+            href="https://www.linkedin.com/in/nasib-shahverdiyev/"
             target="_blank"
             class="contact-card"
           >
             <span class="icon">in</span>
             <div>
-              <small>LinkedIn</small><strong>linkedin.com/in/nasib</strong>
+              <small>LinkedIn</small
+              ><strong>linkedin.com/in/nasib-shahverdiyev</strong>
             </div>
           </a>
           <a href="tel:+994558579896" class="contact-card">
@@ -1370,26 +1413,36 @@
 
     <footer>© 2026 Nasib Shahverdiyev. All rights reserved.</footer>
 
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
       // ── Mobile menu ──
       function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const btn = document.getElementById('hamburger');
-        menu.classList.toggle('open');
-        btn.classList.toggle('open');
-        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+        const menu = document.getElementById("mobileMenu");
+        const btn = document.getElementById("hamburger");
+        menu.classList.toggle("open");
+        btn.classList.toggle("open");
+        document.body.style.overflow = menu.classList.contains("open")
+          ? "hidden"
+          : "";
       }
       function closeMobileMenu() {
-        document.getElementById('mobileMenu').classList.remove('open');
-        document.getElementById('hamburger').classList.remove('open');
-        document.body.style.overflow = '';
+        document.getElementById("mobileMenu").classList.remove("open");
+        document.getElementById("hamburger").classList.remove("open");
+        document.body.style.overflow = "";
       }
       // Update mobile menu links when language changes
       function updateMobileMenuLinks(t) {
-        const links = document.querySelectorAll('.mobile-menu a');
-        const keys = ['about','education','experience','projects','skills','contact'];
-        keys.forEach((k,i) => { if(links[i] && t[k]) links[i].textContent = t[k]; });
+        const links = document.querySelectorAll(".mobile-menu a");
+        const keys = [
+          "about",
+          "education",
+          "experience",
+          "projects",
+          "skills",
+          "contact",
+        ];
+        keys.forEach((k, i) => {
+          if (links[i] && t[k]) links[i].textContent = t[k];
+        });
       }
     </script>
     <script>
@@ -1462,16 +1515,45 @@
           pipelineTitle: "İdeadan İstehsala",
           pipelineSub:
             "Clean architecture və real dünya alətləri ilə tam dövrə çatdırma.",
-          // Section labels
+          pipelineHover: "Addıma sürün",
+          pipelineHoverSub: "Proqram təminatını necə çatdırdığımı görün.",
+          // Section labels (small caps)
           myStory: "Mənim Hekayəm",
           myEducation: "Təhsilim",
           workHistory: "İş Tarixçəsi",
           featuredWork: "Seçilmiş İşlər",
           whatIKnow: "Nə Bilirəm",
           getInTouch: "Əlaqə Saxla",
+          // Section titles (h2)
+          aboutTitle: "Haqqımda",
+          educationTitle: "Təhsil",
+          experienceTitle: "Təcrübə",
+          projectsTitle: "Layihələr",
+          skillsTitle: "Bacarıqlar",
+          contactTitle: "Əlaqə",
           // About
           aboutText:
-            "Mən 2015-ci ildən bəri proqramlaşdırma ilə məşğulam və 2016-cı ildə peşəkar şəkildə ASP.NET və C# ilə işə başlamışam. Backend memarisi və məlumat axınları mənim əsas güclü tərəflərimdir. Kod yazmağı, xüsusilə də real problemləri həll edən sistemlər qurmağı sevirəm.",
+            "Mən C#, ASP.NET Core, SQL Server və REST API inkişafında praktiki təcrübəyə malik, həvəsli bir Backend Developer-əm. Güclü problem həll etmə bacarıqlarım, analitik düşüncəm və 9 illik əməliyyat təcrübəsindən qazandığım intizamlı iş etikam var. Kollaborativ mühəndislik mühitində inkişaf etməyə və real backend layihələrinə töhfə verməyə hazıram.",
+          // Experience
+          expTitle1: "Qiymət Müfəttişi / Məlumat Giriş Mütəxəssisi",
+          expCompany1: "Azerbaijan Supermarket MMC",
+          expBadge1: "9 il · Tamamlandı",
+          expBullet1a:
+            "Böyük həcmli məhsul və qiymət məlumatlarını yüksək dəqiqliklə topladı, təhlil etdi və daxil etdi.",
+          expBullet1b:
+            "Daxili sistemlər arasında məlumat ardıcıllığını təmin etdi və ümumi məlumat keyfiyyətini artırdı.",
+          expBullet1c:
+            "Uyğunsuzluqları müəyyən etdi və düzgün məlumat bazası qeydlərini saxlamaq üçün müntəzəm yoxlamalar apardı.",
+          openTitle: "Yeni Vəzifələrə Açığam",
+          openText:
+            "Aktiv olaraq backend / full-stack developer vəzifələri axtarıram. Təcrübə və junior rolları üçün hazıram.",
+          openBtn: "Əlaqə Saxla",
+          // Projects
+          projDesc1:
+            "Full-Stack restoran idarəetmə platforması. Müştəri, kuryer, aşpaz, admin daxil olmaqla 6 fərqli rol paneli, real-time sifariş izləmə, onlayn ödəniş və xəritə inteqrasiyası ilə tam işlək sistem.",
+          // Contact
+          contactSub:
+            "Backend/full-stack rolları, təcrübə proqramları və əməkdaşlıq üçün açığam.",
           // Footer
           footerText: "© 2026 Nasib Şahverdiyev. Bütün hüquqlar qorunur.",
         },
@@ -1491,6 +1573,9 @@
           pipelineTitle: "От Идеи до Продакшена",
           pipelineSub:
             "Полный цикл разработки с clean architecture и современными инструментами.",
+          pipelineHover: "Наведите на шаг",
+          pipelineHoverSub:
+            "Смотрите, как я поставляю готовый к производству код.",
           // Section labels
           myStory: "Моя История",
           myEducation: "Моё Образование",
@@ -1498,9 +1583,36 @@
           featuredWork: "Избранные Работы",
           whatIKnow: "Мои Навыки",
           getInTouch: "Связаться",
+          // Section titles
+          aboutTitle: "Обо Мне",
+          educationTitle: "Образование",
+          experienceTitle: "Опыт",
+          projectsTitle: "Проекты",
+          skillsTitle: "Навыки",
+          contactTitle: "Контакты",
           // About
           aboutText:
-            "Я занимаюсь программированием с 2015 года и профессионально начал работать с ASP.NET и C# в 2016 году. Backend архитектура и потоки данных — мои основные сильные стороны. Люблю писать код, особенно создавать системы, решающие реальные проблемы.",
+            "Я целеустремлённый Backend Developer с практическим опытом работы на C#, ASP.NET Core, SQL Server и разработке REST API. Обладаю сильными навыками решения задач, аналитическим мышлением и дисциплинированной рабочей этикой, выработанной за 9 лет операционного опыта. Стремлюсь развиваться в командной инженерной среде и вносить вклад в реальные backend-проекты.",
+          // Experience
+          expTitle1: "Инспектор Цен / Специалист по Вводу Данных",
+          expCompany1: "Azerbaijan Supermarket MMC",
+          expBadge1: "9 лет · Завершено",
+          expBullet1a:
+            "Собирал, анализировал и вводил большие объёмы данных о продуктах и ценах с высокой точностью.",
+          expBullet1b:
+            "Обеспечивал согласованность данных во внутренних системах и улучшал их качество.",
+          expBullet1c:
+            "Выявлял расхождения и проводил плановые проверки для поддержания корректных записей.",
+          openTitle: "Открыт к Новым Должностям",
+          openText:
+            "Активно ищу позиции backend / full-stack разработчика. Готов к стажировкам и junior-ролям.",
+          openBtn: "Связаться",
+          // Projects
+          projDesc1:
+            "Full-Stack платформа управления рестораном. 6 панелей ролей (клиент, курьер, повар, администратор и др.), отслеживание заказов в реальном времени, онлайн-оплата и интеграция с картой.",
+          // Contact
+          contactSub:
+            "Открыт к backend/full-stack позициям, стажировкам и сотрудничеству.",
           // Footer
           footerText: "© 2026 Насиб Шахвердиев. Все права защищены.",
         },
@@ -1520,6 +1632,9 @@
           pipelineTitle: "From Idea to Production",
           pipelineSub:
             "Full-cycle delivery with clean architecture and real-world tooling.",
+          pipelineHover: "Hover a step",
+          pipelineHoverSub:
+            "See how I deliver production-ready software end to end.",
           // Section labels
           myStory: "My Story",
           myEducation: "My Education",
@@ -1527,9 +1642,36 @@
           featuredWork: "Featured Work",
           whatIKnow: "What I Know",
           getInTouch: "Get In Touch",
+          // Section titles
+          aboutTitle: "About Me",
+          educationTitle: "Education",
+          experienceTitle: "Relevant Experience",
+          projectsTitle: "Projects",
+          skillsTitle: "Skills",
+          contactTitle: "Contact",
           // About
           aboutText:
-            "I've been coding since 2015 and started working professionally with ASP.NET and C# in 2016. Backend architecture and data flows are my core strengths. I love writing code, especially building systems that solve real problems.",
+            "I am a motivated Backend Developer with hands-on experience in C#, ASP.NET Core, SQL Server, and REST API development. I possess strong problem-solving skills, an analytical mindset, and a disciplined work ethic developed through 9 years of operational experience. I am eager to grow in a collaborative engineering environment and contribute to real backend projects.",
+          // Experience
+          expTitle1: "Price Surveyor / Data Entry Specialist",
+          expCompany1: "Azerbaijan Supermarket MMC",
+          expBadge1: "9 years · Completed",
+          expBullet1a:
+            "Collected, analyzed, and entered large volumes of product and price data with high accuracy.",
+          expBullet1b:
+            "Ensured data consistency across internal systems and improved overall data quality.",
+          expBullet1c:
+            "Identified discrepancies and performed routine validation checks to maintain correct database records.",
+          openTitle: "Open to New Roles",
+          openText:
+            "Actively seeking backend / full-stack developer positions. Available for internships and junior roles.",
+          openBtn: "Get in Touch",
+          // Projects
+          projDesc1:
+            "Full-Stack restaurant management platform. 6 role panels (customer, courier, chef, admin, etc.), real-time order tracking, online payment and map integration.",
+          // Contact
+          contactSub:
+            "Open to backend/full-stack roles, internships, and collaborations.",
           // Footer
           footerText: "© 2026 Nasib Shahverdiyev. All rights reserved.",
         },
@@ -1579,7 +1721,7 @@
       function applyTranslations(lang) {
         const t = translations[lang];
 
-        // Update nav links
+        // Nav links
         const navLinks = document.querySelectorAll(".nav-links a");
         if (navLinks[0]) navLinks[0].textContent = t.about;
         if (navLinks[1]) navLinks[1].textContent = t.education;
@@ -1588,22 +1730,27 @@
         if (navLinks[4]) navLinks[4].textContent = t.skills;
         if (navLinks[5]) navLinks[5].textContent = t.contact;
 
-        // Update mobile menu links
+        // Mobile menu links
         updateMobileMenuLinks(t);
 
-        // Update hero
+        // Hero
         const heroSubtitle = document.querySelector(".hero-subtitle");
         const heroTagline = document.querySelector(".hero-tagline");
         if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
         if (heroTagline) heroTagline.textContent = t.heroTagline;
 
-        // Update pipeline
+        // Pipeline
         const pipelineTitle = document.querySelector(".pipeline-title");
         const pipelineSub = document.querySelector(".pipeline-sub");
         if (pipelineTitle) pipelineTitle.textContent = t.pipelineTitle;
         if (pipelineSub) pipelineSub.textContent = t.pipelineSub;
+        // Reset pipeline info to hover state
+        const info = document.getElementById("pipeline-info");
+        if (info)
+          info.innerHTML = `<h4>${t.pipelineHover}</h4><p>${t.pipelineHoverSub}</p>`;
+        showStep(0);
 
-        // Update section labels
+        // Section labels (small caps)
         const sectionLabels = document.querySelectorAll(".section-label");
         if (sectionLabels[0]) sectionLabels[0].textContent = t.myStory;
         if (sectionLabels[1]) sectionLabels[1].textContent = t.myEducation;
@@ -1612,11 +1759,52 @@
         if (sectionLabels[4]) sectionLabels[4].textContent = t.whatIKnow;
         if (sectionLabels[5]) sectionLabels[5].textContent = t.getInTouch;
 
-        // Update about text
+        // Section titles (h2)
+        const sectionTitles = document.querySelectorAll(".section-title");
+        if (sectionTitles[0]) sectionTitles[0].textContent = t.aboutTitle;
+        if (sectionTitles[1]) sectionTitles[1].textContent = t.educationTitle;
+        if (sectionTitles[2]) sectionTitles[2].textContent = t.experienceTitle;
+        if (sectionTitles[3]) sectionTitles[3].textContent = t.projectsTitle;
+        if (sectionTitles[4]) sectionTitles[4].textContent = t.skillsTitle;
+        if (sectionTitles[5]) sectionTitles[5].textContent = t.contactTitle;
+
+        // About text
         const aboutText = document.querySelector(".about-text");
         if (aboutText) aboutText.textContent = t.aboutText;
 
-        // Update footer
+        // Experience card 1
+        const expCards = document.querySelectorAll(".exp-card");
+        if (expCards[0]) {
+          const h3 = expCards[0].querySelector("h3");
+          const company = expCards[0].querySelector(".company");
+          const badge = expCards[0].querySelector(".exp-badge");
+          const bullets = expCards[0].querySelectorAll(".exp-bullets li");
+          if (h3) h3.textContent = t.expTitle1;
+          if (company) company.textContent = t.expCompany1;
+          if (badge) badge.textContent = t.expBadge1;
+          if (bullets[0]) bullets[0].textContent = t.expBullet1a;
+          if (bullets[1]) bullets[1].textContent = t.expBullet1b;
+          if (bullets[2]) bullets[2].textContent = t.expBullet1c;
+        }
+        // Open to new roles card
+        if (expCards[1]) {
+          const h3 = expCards[1].querySelector("h3");
+          const p = expCards[1].querySelector("p");
+          const btn = expCards[1].querySelector("a.btn");
+          if (h3) h3.textContent = t.openTitle;
+          if (p) p.textContent = t.openText;
+          if (btn) btn.textContent = t.openBtn;
+        }
+
+        // Projects - description
+        const projDesc = document.querySelector(".proj-desc");
+        if (projDesc) projDesc.textContent = t.projDesc1;
+
+        // Contact sub
+        const contactSub = document.querySelector(".contact-sub");
+        if (contactSub) contactSub.textContent = t.contactSub;
+
+        // Footer
         const footer = document.querySelector("footer");
         if (footer) footer.textContent = t.footerText;
       }
@@ -1629,4 +1817,18 @@
           !langSelector.contains(event.target) &&
           dropdown.classList.contains("show")
         ) {
-          dropdown.classList.remove
+          dropdown.classList.remove("show");
+        }
+      });
+
+      // Apply saved language on page load
+      applyTranslations(currentLang);
+      document.getElementById("currentLang").textContent =
+        langConfig[currentLang].code;
+      document.querySelectorAll(".lang-option").forEach((opt, idx) => {
+        const langs = ["az", "ru", "en"];
+        opt.classList.toggle("active", langs[idx] === currentLang);
+      });
+    </script>
+  </body>
+</html>
